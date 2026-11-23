@@ -1,0 +1,11 @@
+
+.header {
+    margin: 28px 0px;
+}
+
+.header__title {
+    font-size: 34px;
+    text-align: center;
+    font-family: var(--display);
+}
+
