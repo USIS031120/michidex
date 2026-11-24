@@ -1,5 +1,5 @@
 
-import { typeColors } from "../utils/TypeColors";
+import { typeColors } from "../utils/typeColors";
 
 export const Card = ({id, name, image, types, ability}) => {
     const typeColor = typeColors[types.type1];

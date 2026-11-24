@@ -1,7 +1,8 @@
 
-import { michis } from '../utils/data';
 import { Card } from './Card';
 import '../styles/Michidex.css';
+import { useContext } from 'react';
+import { MichiContext } from '../context/MichiContext';
 
 const images = import.meta.glob(
     '../assets/michis/*.{jpg,jpeg,png,webp}',
@@ -14,10 +15,12 @@ const images = import.meta.glob(
 
 export const Michidex = () => {
 
+    const { searchedMichis } = useContext(MichiContext);
+    
     return (
         <ul className='michidex'>
             {
-                michis.map(michi => (
+                searchedMichis.map(michi => (
                     <Card
                         key={michi.id}
                         {...michi}

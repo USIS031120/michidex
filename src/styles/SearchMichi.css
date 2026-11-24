@@ -1,0 +1,26 @@
+
+.search-michi {
+	position: relative;
+	margin-bottom: 14px;
+}
+
+.search-michi__input {
+	border: 1px solid var(--light-gray);
+	padding: 16px;
+	padding-left: 44px;
+	border-radius: 14px;
+	outline: none;
+	width: 100%;
+	color: var(--input-text);
+	font-size: 16px;
+}
+
+.search-michi__icon {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	margin-left: 16px;
+	font-size: 16px;
+}
+

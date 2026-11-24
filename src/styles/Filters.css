@@ -1,0 +1,17 @@
+
+.filters {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+}
+
+.filters__item {
+	background-color: var(--red);
+	padding: 12px 28px;
+	border-radius: 24px;
+	color: #fff;
+	font-size: 12px;
+	cursor: pointer;
+}
