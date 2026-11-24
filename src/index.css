@@ -21,6 +21,13 @@
 
   --light-gray: #E8DEDA;
   --input-text: #786C70;
+
+  --primary: #35205F;
+  --secondary: #9160CE;
+  --lavender: #E9DDFB;
+  --light-lavender: #F4EDFF;
+  --white-lavender: #FBF8FE;
+
   --roboto: "Roboto", sans-serif;
   --display: "Archivo Black", sans-serif;
 }
@@ -34,6 +41,7 @@
 body {
   font-size: 16px;
   font-family: var(--roboto);
+  background-color: var(--white-lavender);
 }
 
 .container {

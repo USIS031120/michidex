@@ -1,15 +1,37 @@
 
+import { useContext } from 'react';
 import '../styles/Filters.css';
 import { typeColors, types } from '../utils/typeColors';
+import { TypeDropdown } from './TypeDropdown';
+import { MichiContext } from '../context/MichiContext';
 
 const Filters = () => {
+	const { selectedType, setSelectedType } = useContext(MichiContext);
 	return (
 		<ul className="filters">
-			<li className="filters__item">Todos</li>
+			<li
+			className={`filters__item filters__item--all ${selectedType === 'Todos' ? 'filters__item--active': ''}`}
+			onClick={() => setSelectedType('Todos')}
+			>
+				Todos
+			</li>
 
-			{ types.map(type => (
-				<li key={type} style={{backgroundColor: typeColors[type].main}} className="filters__item">{type}</li>
-			)) }
+			{ types.slice(0, 5).map(type => {
+				const colors = typeColors[type];
+				return (
+					<li key={type} style={{
+						'--type-light': colors.light,
+						'--type-main': colors.main,
+						'--type-text': colors.text,
+          				'--type-active-text': colors.activeText,
+					}} className={`filters__item ${selectedType === type ? 'filters__item--active' : ''}`}
+					onClick={() => setSelectedType(type)}>{type}</li>
+				)}
+			)}
+
+			<li className="filters__item filters__item--dropdown">
+        		<TypeDropdown />
+      		</li>
 		</ul>
 	)
 }

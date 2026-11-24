@@ -1,9 +1,8 @@
 
 import './App.css'
-import { Filters } from './components/Filters'
 import { Header } from './components/Header'
 import { Michidex } from './components/Michidex'
-import { SearchMichi } from './components/SearchMichi'
+import { SearchBar } from './components/SearchBar'
 import { MichiProvider } from './context/MichiContext'
 
 function App() {
@@ -12,8 +11,7 @@ function App() {
     <MichiProvider>
       <div className='container'>
           <Header />
-          <SearchMichi />
-          <Filters />
+          <SearchBar />
           <Michidex />
       </div>
     </MichiProvider>

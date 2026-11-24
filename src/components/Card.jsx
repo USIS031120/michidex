@@ -1,4 +1,5 @@
 
+import { LuHeart } from "react-icons/lu";
 import { typeColors } from "../utils/typeColors";
 
 export const Card = ({id, name, image, types, ability}) => {
@@ -12,6 +13,9 @@ export const Card = ({id, name, image, types, ability}) => {
         >
             <div className="card__image-container">
                 <span className="card__id">{ id }</span>
+                <button className="card__heart">
+                    <LuHeart className="card__icon" />
+                </button>
                 <img src={image} alt={name} className="card__image" />
             </div>
             <div className="card__content">

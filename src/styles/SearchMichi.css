@@ -1,7 +1,7 @@
 
 .search-michi {
 	position: relative;
-	margin-bottom: 14px;
+	flex: 1;
 }
 
 .search-michi__input {

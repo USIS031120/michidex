@@ -6,12 +6,20 @@ const MichiContext = createContext();
 const MichiProvider = ({ children }) => {
 
 	const [searchMichi, setSearchMichi] = useState('');
+	const [selectedType, setSelectedType] = useState('Todos');
 	
 	const searchedMichis = michis.filter(michi => {
 		const searchText = searchMichi.toLowerCase();
 		const michiName = michi.name.toLowerCase();
 
-		return michiName.includes(searchText);
+		const matchesSearch = michiName.includes(searchText);
+		
+		const matchesType = selectedType === "Todos" ||
+		michi.types.type1 === selectedType ||
+		michi.types.type2 === selectedType;
+
+		return matchesSearch && matchesType;
+
 	});
 
 	return (
@@ -19,6 +27,8 @@ const MichiProvider = ({ children }) => {
 			searchMichi,
 			setSearchMichi,
 			searchedMichis,
+			selectedType,
+			setSelectedType,
 		}}>
 			{ children }
 		</MichiContext.Provider>
