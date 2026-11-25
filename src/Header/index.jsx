@@ -1,7 +1,7 @@
 
-import { LuHouse, LuStar } from 'react-icons/lu';
+import { LuHeart, LuHouse } from 'react-icons/lu';
 import { NavLink } from 'react-router-dom';
-import '../styles/Header.css';
+import './Header.css';
 export const Header = () => {
     
     return (
@@ -18,14 +18,11 @@ export const Header = () => {
                     
                     <li className='nav__item'>
                         <NavLink to="/favoritos" className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}>
-                            <LuStar className='nav__icon' /> Favoritos
+                            <LuHeart className='nav__icon' /> Favoritos
                         </NavLink>
                     </li>
                 </ul>
             </header>
-
-            <h1 className="header__title">MICHIDEX</h1>
-            <h2 className='header__subtitle'>Descubre, clasifica y conecciona michis</h2>
         </>
     )
 }

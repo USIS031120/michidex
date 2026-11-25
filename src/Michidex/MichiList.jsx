@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "./Card";
 import { MichiInfo } from "./MichiInfo";
-import { Modal } from "./Modal";
+import { Modal } from "../Modal";
 
 const images = import.meta.glob(
 	'../assets/michis/*.{jpg,jpeg,png,webp}',

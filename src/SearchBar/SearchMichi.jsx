@@ -1,5 +1,5 @@
 import { LuSearch } from "react-icons/lu";
-import '../styles/SearchMichi.css';
+import './SearchMichi.css';
 import { useContext } from "react";
 import { MichiContext } from "../context/MichiContext";
 

@@ -1,7 +1,7 @@
 import { typeColors } from '../utils/typeColors';
 import './MichiInfo.css';
 
-export const MichiInfo = ({ id, image, name, types, ability }) => {
+export const MichiInfo = ({ image, name, types, ability }) => {
     const typeColor = typeColors[types.type1];
     const secondaryTypeColor = types.type2
         ? typeColors[types.type2]?.main
@@ -10,7 +10,7 @@ export const MichiInfo = ({ id, image, name, types, ability }) => {
     return (
         <article className="card michi-info" style={{ backgroundColor: typeColor.light }}>
             <div className="card__image-container">
-                <span className="card__id">{id}</span>
+                {/* <span className="card__id">{id}</span> */}
                 <img src={image} alt={name} className="card__image" />
             </div>
             <div className="card__content">

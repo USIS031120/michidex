@@ -1,7 +1,13 @@
 
 .header {
     margin: 28px 0px;
+    padding: 0px 68px;
     display: flex;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 14px;
+    }
 }
 
 .nav {
@@ -14,6 +20,9 @@
 .nav__item {
     font-weight: 700;
     list-style: none;
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
 }
 
 .nav__link--active {
@@ -38,6 +47,11 @@
     font-size: 28px;
     font-family: var(--display);
     color: var(--primary);
+
+    @media (max-width: 1024px) {
+        text-align: center;
+        font-size: 22px;
+    }
 }
 
 .header__title2 {

@@ -1,0 +1,33 @@
+.hero {
+    background: url('../assets/fondo.png');
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 24px;
+    padding: 22px 0px;
+
+    @media (max-width: 1024px) {
+        padding: 22px;
+    }
+}
+
+.hero__title {
+    font-size: 54px;
+    color: var(--primary);
+    font-family: var(--display);
+    text-align: center;
+    letter-spacing: -0.08em;
+
+    @media (max-width: 1024px) {
+        font-size: 32px;
+    }
+}
+
+.hero__subtitle {
+    color: var(--secondary);
+    text-align: center;
+    font-weight: 400;
+
+    @media (max-width: 1024px) {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,11 @@
+.search-bar {
+    display: flex;
+    gap: 14px;
+	margin-bottom: 14px;
+    padding: 0px 68px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding: 0px 22px;
+    }
+}

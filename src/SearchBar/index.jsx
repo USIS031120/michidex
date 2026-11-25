@@ -1,6 +1,6 @@
 import { Filters } from "./Filters";
 import { SearchMichi } from "./SearchMichi";
-import '../styles/SearchBar.css';
+import './SearchBar.css';
 
 const SearchBar = () => {
 

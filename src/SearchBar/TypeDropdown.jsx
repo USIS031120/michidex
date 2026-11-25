@@ -1,7 +1,7 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { LuChevronDown } from 'react-icons/lu';
 import { typeColors, types } from '../utils/typeColors';
-import '../styles/TypeDropdown.css';
+import './TypeDropdown.css';
 
 export const TypeDropdown = ({ selectedType, onSelect }) => {
 

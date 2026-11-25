@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { LuX } from 'react-icons/lu';
-import '../styles/Modal.css';
+import './Modal.css';
 
 export const Modal = ({ children, onClose }) => {
     useEffect(() => {
@@ -15,6 +15,15 @@ export const Modal = ({ children, onClose }) => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [onClose]);
 
+    useEffect(() => {
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, []);
+    
     const modalRoot = document.getElementById('modal');
     if (!modalRoot) {
         throw new Error('The modal portal root element was not found.');

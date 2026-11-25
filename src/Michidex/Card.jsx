@@ -1,5 +1,5 @@
 
-import { LuHeart } from "react-icons/lu";
+import { LuHeart, LuInfo } from "react-icons/lu";
 import { typeColors } from "../utils/typeColors";
 import { useContext } from "react";
 import { MichiContext } from "../context/MichiContext";
@@ -19,7 +19,7 @@ export const Card = ({id, name, image, types, ability, onShowInfo}) => {
                 <button className={`card__heart ${favoriteIds.includes(id) ? 'card__heart--active' : ''}`} onClick={() => toggleFavorite(id)}>
                     <LuHeart className="card__icon" />
                 </button>
-                <img src={image} alt={name} className="card__image" />
+                <img src={image} alt={name} className="card__image" onClick={onShowInfo} />
             </div>
             <div className="card__content">
 
@@ -52,7 +52,7 @@ export const Card = ({id, name, image, types, ability, onShowInfo}) => {
                     aria-haspopup="dialog"
                     onClick={onShowInfo}
                 >
-                    Ver información
+                    <LuInfo />
                 </button>
             </div>
         </li>

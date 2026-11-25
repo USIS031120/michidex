@@ -1,6 +1,6 @@
 
 import { useContext } from 'react';
-import '../styles/Filters.css';
+import './Filters.css';
 import { typeColors, types } from '../utils/typeColors';
 import { TypeDropdown } from './TypeDropdown';
 import { MichiContext } from '../context/MichiContext';

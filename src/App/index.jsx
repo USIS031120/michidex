@@ -1,25 +1,24 @@
 
-import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Header } from './components/Header'
-import { Michidex } from './components/Michidex'
-import { SearchBar } from './components/SearchBar'
-import { MichiProvider } from './context/MichiProvider'
-import { FavoritesPage } from './pages/FavoritesPage'
+import { Header } from '../Header'
+import { Michidex } from '../Michidex'
+import { SearchBar } from '../SearchBar'
+import { MichiProvider } from '../context/MichiProvider'
+import { FavoritesPage } from '../pages/FavoritesPage'
+import { Hero } from '../Hero'
 
 function App() {
 
   return (
     <MichiProvider>
       <BrowserRouter>
-        <div className='container'>
           <Header />
+          <Hero />
           <SearchBar />
           <Routes>
             <Route path="/" element={<Michidex />} />
             <Route path="/favoritos" element={<FavoritesPage />} />
           </Routes>
-        </div>
       </BrowserRouter>
     </MichiProvider>
   )

@@ -1,5 +1,5 @@
 
-import '../styles/Michidex.css';
+import './Michidex.css';
 import { useContext } from 'react';
 import { MichiContext } from '../context/MichiContext';
 import { MichiList } from './MichiList';

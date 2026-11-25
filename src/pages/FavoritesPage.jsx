@@ -1,5 +1,5 @@
-import '../styles/FavoritesPage.css';
-import { MichiList } from '../components/MichiList';
+import './FavoritesPage.css';
+import { MichiList } from '../Michidex/MichiList';
 import { useContext } from 'react';
 import { MichiContext } from '../context/MichiContext';
 
