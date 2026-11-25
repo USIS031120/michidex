@@ -1,5 +1,6 @@
 
 import { LuHouse, LuStar } from 'react-icons/lu';
+import { NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 export const Header = () => {
     
@@ -9,9 +10,17 @@ export const Header = () => {
                 <h2 className='header__title'>MICHIDEX</h2>
 
                 <ul className='nav'>
-                    <li className='nav__item nav__item--active'><a href="" className='nav__link'><LuHouse className='nav__icon' /> Explorar</a></li>
+                    <li className='nav__item'>
+                        <NavLink to="/" end className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}>
+                            <LuHouse className='nav__icon' /> Explorar
+                        </NavLink>
+                    </li>
                     
-                    <li className='nav__item'><a href="" className='nav__link'><LuStar className='nav__icon' /> Favoritos</a></li>
+                    <li className='nav__item'>
+                        <NavLink to="/favoritos" className={({ isActive }) => `nav__link${isActive ? ' nav__link--active' : ''}`}>
+                            <LuStar className='nav__icon' /> Favoritos
+                        </NavLink>
+                    </li>
                 </ul>
             </header>
 

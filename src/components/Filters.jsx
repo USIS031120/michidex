@@ -30,7 +30,7 @@ const Filters = () => {
 			)}
 
 			<li className="filters__item filters__item--dropdown">
-        		<TypeDropdown />
+        		<TypeDropdown selectedType={selectedType} onSelect={setSelectedType} />
       		</li>
 		</ul>
 	)

@@ -1,16 +1,17 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { LuChevronDown } from 'react-icons/lu';
-import { typeColors } from '../utils/typeColors';
+import { typeColors, types } from '../utils/typeColors';
 import '../styles/TypeDropdown.css';
 
 export const TypeDropdown = ({ selectedType, onSelect }) => {
-  const types = Object.keys(typeColors);
 
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger className="filter__trigger">
-        Más tipos
-        <LuChevronDown />
+        <span className="filter__trigger-label">
+          {selectedType === 'Todos' ? 'Más tipos' : selectedType}
+        </span>
+        <LuChevronDown aria-hidden="true" />
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
@@ -19,7 +20,7 @@ export const TypeDropdown = ({ selectedType, onSelect }) => {
           align="end"
           sideOffset={8}
         >
-          {types.map(type => (
+          {types.slice(5, 8).map(type => (
             <DropdownMenu.Item
               key={type}
               className="filter__option"

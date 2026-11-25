@@ -13,13 +13,10 @@
 
 .nav__item {
     font-weight: 700;
-    /* color: var(--red); */
-    border-radius: 28px;
-    padding: 8px 14px;
     list-style: none;
 }
 
-.nav__item--active {
+.nav__link--active {
     background-color: var(--lavender);
 }
 
@@ -32,6 +29,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 8px 14px;
+    border-radius: 28px;
     color: var(--primary);
 }
 

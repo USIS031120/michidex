@@ -1,0 +1,25 @@
+.favorites-page__title {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-family: var(--display);
+}
+
+.favorites-page__empty {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 48px 16px;
+  border: 1px dashed var(--lavender);
+  border-radius: 24px;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.favorites-page__icon {
+  font-size: 36px;
+}
+
+.favorites-page__message {
+  color: var(--primary);
+  font-weight: 700;
+}

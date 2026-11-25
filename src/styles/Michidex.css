@@ -40,7 +40,7 @@
 }
 
 .card__heart {
-    color: var(--red);
+    color: #fff;
     font-size: 24px;
     position: absolute;
     top: 0;
@@ -52,9 +52,18 @@
 }
 
 .card__heart:hover .card__icon {
+    fill: #fff;
+}
+.card__heart--active:hover .card__icon {
     fill: var(--red);
 }
-.card__title {
+
+.card__heart--active .card__icon {
+    fill: var(--red);
+    color: var(--red);
+}
+
+.card__title {  
     font-size: 22px;
     margin: 14px 0px;
     font-family: var(--display);
@@ -72,6 +81,27 @@
     font-size: 14px;
     margin: 14px 0px;
 }
+
+.card__details-button {
+    margin-top: 14px;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 999px;
+    background-color: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+}
+
+.card__details-button:hover {
+    background-color: var(--secondary);
+}
+
+.card__details-button:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
 .card__content {
 
 }
